@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.example.raffaele.remotemouse.MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/text_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/left_click"
+                android:layout_width="350px"
+                android:layout_height="250px"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="20dp"
+                android:text="Click sinistro"/>
+
+            <Button
+                android:id="@+id/right_click"
+                android:layout_width="350px"
+                android:layout_height="250px"
+                android:layout_alignParentRight="true"
+                android:layout_margin="20dp"
+                android:text="Clicck destro"/>
+
+            <Button
+                android:id="@+id/calibra"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
+                android:text="Calibra"
+                android:layout_alignBaseline="@+id/right_click"
+                android:layout_alignBottom="@+id/right_click"
+                android:layout_centerHorizontal="true"
+                android:onClick="calibrateSensor"/>
+
+        </RelativeLayout>
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:translationX="0px"
+            android:translationY="0px" />
+    </FrameLayout>
+
+</FrameLayout>
